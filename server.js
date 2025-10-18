@@ -52,6 +52,19 @@ const server = http.createServer(async (req, res) => {
                 return;
         }
 
+        if (req.method === 'GET' && req.url === '/') {
+                res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({
+                        "status": "success",
+                        "message": "Welcome to Dynamic Profile API",
+                        "endpoints": {
+                                "/me": "GET - Returns user profile with a random cat fact"
+                        },
+                        "documentation": "https://github.com/fiki2002/Dynamic-profile"
+                }));
+                return;
+        }
+
         res.writeHead(404, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({
                 "status": "error",
