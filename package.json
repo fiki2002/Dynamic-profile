@@ -1,0 +1,18 @@
+{
+  "name": "dynamic_profile_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "hng",
+    "backend",
+    "api",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
